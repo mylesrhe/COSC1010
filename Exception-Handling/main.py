@@ -8,7 +8,7 @@
 def main ():
     try:
         # This opens the numbers file.
-        numbers = open('/workspaces/COSC1010/Average-of-Numbers/numbers.txt','r')
+        numbers = open('/workspaces/COSC1010/Exception-Handling/numbers.txt','r')
 
         # Stores numbers retrieved in there respective variables.
         num1 = int(numbers.readline())
