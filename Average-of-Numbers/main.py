@@ -14,6 +14,9 @@ def main ():
     num2 = int(numbers.readline())
     num3 = int(numbers.readline())
 
+    # Closes the numbers file.
+    numbers.close
+    
     # Calculates the average.
     average = (num1+num2+num3)/3
 
