@@ -6,7 +6,7 @@
 #
 # Defines the main function.
 def main ():
-# This opens the numbers file.
+    # This opens the numbers file.
     numbers = open('/workspaces/COSC1010/Average-of-Numbers/numbers.txt','r')
 
     # Stores numbers retrieved in there respective variables.
