@@ -6,19 +6,26 @@
 #
 # Defines the main function.
 def main ():
+    
+    # this is the acumilator for the readline loop 
+    amount = 0
+
     # This opens the numbers file.
-    numbers = open('/workspaces/COSC1010/Average-of-Numbers/numbers.txt','r')
+    numbers = open('numbers.txt','r')
 
     # Stores numbers retrieved in there respective variables.
-    num1 = int(numbers.readline())
-    num2 = int(numbers.readline())
-    num3 = int(numbers.readline())
+    
+    amount = amount + int(numbers.readline())
+    
+    while numbers != '':
+
+        amount = amount + int(numbers.readline())
 
     # Closes the numbers file.
     numbers.close
     
     # Calculates the average.
-    average = (num1+num2+num3)/3
+    average = amount/3
 
     # Prints the resulting average.
     print(average)
