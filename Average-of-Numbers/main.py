@@ -7,7 +7,7 @@
 # Defines the main function.
 def main ():
     
-    # this is the accumulator for the loop 
+    # This is the accumulator for the loop. 
     amount = 0
 
     # This opens the numbers file.
@@ -16,7 +16,7 @@ def main ():
     # A for loop that runs for each line in the txt file.
     for line in numbers:
        
-       #Adds the amount read from the txt file and adds it to the accumulator
+       # Adds the amount read from the txt file and adds it to the accumulator.
        amount = amount + int(line)
     
     # Closes the numbers file.
