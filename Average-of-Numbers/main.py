@@ -7,20 +7,18 @@
 # Defines the main function.
 def main ():
     
-    # this is the acumilator for the readline loop 
+    # this is the accumulator for the loop 
     amount = 0
 
     # This opens the numbers file.
     numbers = open('numbers.txt','r')
-
-    # Stores numbers retrieved in there respective variables.
     
-    amount = amount + int(numbers.readline())
+    # A for loop that runs for each line in the txt file.
+    for line in numbers:
+       
+       #Adds the amount read from the txt file and adds it to the accumulator
+       amount = amount + int(line)
     
-    while numbers != '':
-
-        amount = amount + int(numbers.readline())
-
     # Closes the numbers file.
     numbers.close
     
