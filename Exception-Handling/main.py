@@ -34,11 +34,11 @@ def main ():
         print("ERROR file not found")
    
     # Exception handler that is triggered when data
-    # input is not valid numbers 
+    # input is not valid numbers. 
     except ValueError:
         print("ERROR data type must be valid numbers")
    
-    # Exception handler for unaccounted for errors
+    # Exception handler for unaccounted for errors.
     except:
         print("ERROR an error occurred")
 
