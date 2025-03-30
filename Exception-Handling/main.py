@@ -7,19 +7,23 @@
 # Defines the main function.
 def main ():
     try:
+        # This is the accumulator for the loop. 
+        amount = 0
+
         # This opens the numbers file.
-        numbers = open('/workspaces/COSC1010/Exception-Handling/numbers.txt','r')
-
-        # Stores numbers retrieved in there respective variables.
-        num1 = int(numbers.readline())
-        num2 = int(numbers.readline())
-        num3 = int(numbers.readline())
-
+        numbers = open('numbers.txt','r')
+    
+        # A for loop that runs for each line in the txt file.
+        for line in numbers:
+       
+            # Adds the amount read from the txt file and adds it to the accumulator.
+            amount = amount + int(line)
+    
         # Closes the numbers file.
         numbers.close
-        
+    
         # Calculates the average.
-        average = (num1+num2+num3)/3
+        average = amount/3
 
         # Prints the resulting average.
         print(average)
