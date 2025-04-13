@@ -7,7 +7,7 @@
 
 # Defines main function. 
 def main():
-    # Stores an empty string that will be apended later. 
+    # Stores an empty string that will be appended later. 
     new_string = ('')
 
     # Gets user input.
@@ -19,11 +19,11 @@ def main():
     # For loop that will iterate for every word in the list.
     for word in phrase_list:
     
-        # Stores the first leter from the word in the 'first' variable.
+        # Stores the first letter from the word in the 'first' variable.
         first = word[0:1]
     
         # If the word is two letters or longer
-        # the following leters are stored in the 'second' variable. 
+        # the following letters are stored in the 'second' variable. 
         if len(word) > 1:
             second = word[1:]
         
