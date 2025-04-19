@@ -1,6 +1,6 @@
 #
-# Name
-# Date
+# Myles Tollefson
+# 4/19/2025
 # Capital Quiz Programming Project
 # COSC 1010
 #
@@ -37,8 +37,39 @@ def main():
                 'Wisconsin':'Madison', 'Wyoming':'Cheyenne'}
 
     # Local variables
+    num_correct = 0 # This variable counts correct responses.
+    num_incorrect = 0 # This variable counts incorrect responses.
+    
+    # Asks user for an amount of rounds that the quiz will last.
+    num_rounds = int(input("how many rounds would you like to go? "))
 
-    # Continue until user quits the game.
+    # For loop that will quiz the user.
+    for count in range(num_rounds):
+        
+        # Grabs a random state and capital.
+        state, capital = capitals.popitem()
 
+        # Asks the question to the user.
+        print("what is the capital of", state , "?", end=' ')
+        response = input()
+
+        # Checks if the answer is correct.
+        if response.lower() == capital.lower():
+            # Prints correct.
+            print('correct')
+            # Adds one to the num_correct variable.
+            num_correct +=1
+        
+        else:
+            #prints incorrect and gives the correct answer. 
+            print("incorrect. the answer was", capital)
+            # Adds one to the num_incorrect variable.
+            num_incorrect +=1
+    # Gives final score
+    print("thanks for playing your score is")
+    print(num_correct, 'correct')
+    print(num_incorrect, 'incorrect')
+    
 # Call the main function.
-main()
+if __name__ == '__main__':
+    main()
