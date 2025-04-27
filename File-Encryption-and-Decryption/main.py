@@ -6,6 +6,7 @@
 
 # variable to store the output string
 output = ''
+
 # dictionary for encription
 encryption = {'A':'%','a':'9','B':'@','b':'#','C':'~',
               'c':'+','D':'=','d':')','E':'d','e':'1',
@@ -75,8 +76,6 @@ else:
     
     while line != '':
         
-        
-
         # Each character in the line 
         # is check to see if its in the dictionary,
         # if it is its replaced if it isn't
