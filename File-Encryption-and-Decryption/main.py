@@ -39,22 +39,18 @@ if operation.lower() == 'e':
     # Loops until the end of the file is reached.
     while line != '':
         
-        # Turns the read line into a list so it can be worked on.
-        read = list(line)
-
-        # Reads next line.
-        line = encript_file.readline()
-
         # Each character in the line 
         # is checked to see if its in the dictionary,
         # if it is its replaced if it isn't
         # it is just added to the output.
-        for ch in read:
+        for ch in line:
             if ch in encryption:
                 output += encryption[ch]
             else:
                 output += ch        
-    
+        
+        # Reads next line.
+        line = encript_file.readline()
     # Closes the read file. 
     encript_file.close()
     
@@ -79,22 +75,21 @@ else:
     
     while line != '':
         
-        # Turns the read line into a list so it can be worked on.
-        read = list(line)
-
-        # Reads the next line.
-        line = decrypt_file.readline()
+        
 
         # Each character in the line 
         # is check to see if its in the dictionary,
         # if it is its replaced if it isn't
         # it is just added to the output.
-        for ch in read:
+        for ch in line:
             if ch in decryption:
                 output += decryption[ch]
             else:
                 output += ch
-                
+        
+        # Reads the next line.
+        line = decrypt_file.readline()
+    
     # Closes the read file. 
     decrypt_file.close()
     
